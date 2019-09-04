@@ -5,7 +5,9 @@
  */
 package wordsearch;
 
-import static org.junit.Assert.fail;
+import java.io.File;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 /**
@@ -16,6 +18,13 @@ public class WordSearchTest {
     
     @Test
     public void testParseFile() {
-        fail("The test case is a prototype.");
+        System.out.println("parseFile");
+        File file = new File("/Users/manueltijerino/NetBeansProjects/wordsearch/wordsearch/input.txt");
+        Reader reader = new Reader();
+        Model model = reader.parseFile(file);
+        assertNotNull(model);
+        assertNotNull(model.getWords());
+        assertNotNull(model.getMatrix());
+        assertTrue(model.getSize()>0);
     }
 }
