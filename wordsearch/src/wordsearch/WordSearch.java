@@ -174,5 +174,10 @@ public class WordSearch {
         }
         return found;
     }
+    
+    public boolean searchNorthWest(String word, int x, int y){
+        boolean found = false;
+        return found;
+    }
 
 }
