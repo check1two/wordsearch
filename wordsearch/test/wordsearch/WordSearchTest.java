@@ -6,6 +6,7 @@
 package wordsearch;
 
 import java.io.File;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import org.junit.BeforeClass;
@@ -36,5 +37,23 @@ public class WordSearchTest {
         assertNotNull(model.getWords());
         assertNotNull(model.getMatrix());
         assertTrue(model.getSize()>0);
+    }
+    
+    /**
+     * Test of searchNorth method, of class Wordsearch.
+     * Matrix Row 9
+     * Matrix Col 5
+     * Expected true
+     * KHAN: (5,9),(5,8),(5,7),(5,6)
+     */
+    @Test
+    public void testSearchNorth() {
+        System.out.println("searchNorth");
+        String word = "KHAN";
+        int x = 9;
+        int y = 5;
+        boolean expResult = true;
+        boolean result = wordSearch.searchNorth(word, x, y);
+        assertEquals(expResult, result);
     }
 }

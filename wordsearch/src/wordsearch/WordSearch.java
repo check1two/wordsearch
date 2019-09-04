@@ -20,4 +20,10 @@ public class WordSearch {
         this.matrix = puzzle.getMatrix();
         this.size = puzzle.getSize();
     }
+    
+    public boolean searchNorth(String word, int x, int y){
+        boolean found = false;
+        
+        return found;
+    }
 }
