@@ -21,6 +21,34 @@ public class WordSearch {
         this.size = puzzle.getSize();
     }
     
+    public void solve(){
+        for(int i=0;i<words.length;i++){
+            String word = words[i];
+            searchWord(word);
+        }
+    }
+    
+    public void searchWord(String word){
+        String firstLetter = word.substring(0,1);
+        int rowLen = size;
+        int colLen = size;
+        for(int i = 0; i < rowLen; i++){
+            for(int j = 0; j < colLen; j++){
+                String letter = matrix[i][j];
+                if(letter.equals(firstLetter)){
+                    searchNorth(word,i,j);
+                    searchSouth(word,i,j);
+                    searchEast(word,i,j);
+                    searchWest(word,i,j);
+                    searchNorthEast(word,i,j);
+                    searchNorthWest(word,i,j);
+                    searchSouthEast(word,i,j);
+                    searchSouthWest(word,i,j);
+                }
+            }
+        }
+    }
+    
     public boolean searchNorth(String word, int x, int y){
         boolean found = false;
         int length = word.length();
