@@ -208,5 +208,15 @@ public class WordSearch {
         }
         return found;
     }
+    
+    public boolean searchSouthEast(String word, int x, int y){
+        boolean found = false;
+        return found;
+    }
+    
+    public boolean searchSouthWest(String word, int x, int y){
+        boolean found = false;
+        return found;
+    }
 
 }

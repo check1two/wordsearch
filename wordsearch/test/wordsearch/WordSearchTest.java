@@ -145,4 +145,40 @@ public class WordSearchTest {
         boolean result = wordSearch.searchNorthWest(word, x, y);
         assertEquals(expResult, result);
     }
+    
+    /**
+     * Test of searchSouthEast method, of class Wordsearch.
+     * Matrix Row 1
+     * Matrix Col 2
+     * Expected true
+     * SPOCK: (2,1),(3,2),(4,3),(5,4),(6,5)
+     */
+    @Test
+    public void testSearchSouthEast() {
+        System.out.println("searchSouthEast");
+        String word = "SPOCK";
+        int x = 1;
+        int y = 2;
+        boolean expResult = true;
+        boolean result = wordSearch.searchSouthEast(word, x, y);
+        assertEquals(expResult, result);
+    }
+    
+    /**
+     * Test of searchSouthWest method, of class Wordsearch.
+     * Matrix Row 0
+     * Matrix Col 4
+     * Expected true
+     * UHURA: (4,0),(3,1),(2,2),(1,3),(0,4)
+     */
+    @Test
+    public void testSearchSouthWest() {
+        System.out.println("searchSouthWest");
+        String word = "UHURA";
+        int x = 0;
+        int y = 4;
+        boolean expResult = true;
+        boolean result = wordSearch.searchSouthWest(word, x, y);
+        assertEquals(expResult, result);
+    }
 }
