@@ -92,4 +92,22 @@ public class WordSearchTest {
         boolean result = wordSearch.searchEast(word, x, y);
         assertEquals(expResult, result);
     }
+    
+    /**
+     * Test of searchWest method, of class Wordsearch.
+     * Matrix Row 7
+     * Matrix Col 4
+     * Expected true
+     * KIRK: (4,7),(3,7),(2,7),(1,7)
+     */
+    @Test
+    public void testSearchWest() {
+        System.out.println("searchWest");
+        String word = "KIRK";
+        int x = 7;
+        int y = 4;
+        boolean expResult = true;
+        boolean result = wordSearch.searchWest(word, x, y);
+        assertEquals(expResult, result);
+    }
 }
