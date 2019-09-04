@@ -53,6 +53,31 @@ public class WordSearch {
     
     public boolean searchSouth(String word, int x, int y){
         boolean found = false;
+        int length = word.length();
+        StringBuilder sb = new StringBuilder();
+        int i = x;
+        int l = 0;
+        while(i<size && l<length){
+            sb.append(matrix[i][y]);
+            i = i + 1;
+            l = l + 1;
+        }
+        String searchString = sb.toString();
+        found = searchString.contains(word);
+        if(found){
+            i = x;
+            l = 0;
+            System.out.print(word+": ");
+            while(i<size && l<length){
+                System.out.print("("+y+","+i+")");
+                i = i + 1;
+                l = l + 1;
+                if(l<length){
+                    System.out.print(",");
+                }
+            }
+            System.out.println("");
+        }
         return found;
     }
 }
