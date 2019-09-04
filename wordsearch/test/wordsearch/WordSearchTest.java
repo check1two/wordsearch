@@ -5,10 +5,17 @@
  */
 package wordsearch;
 
+import static org.junit.Assert.fail;
+import org.junit.Test;
+
 /**
  *
  * @author manueltijerino
  */
 public class WordSearchTest {
     
+    @Test
+    public void testParseFile() {
+        fail("The test case is a prototype.");
+    }
 }
