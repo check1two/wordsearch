@@ -141,4 +141,38 @@ public class WordSearch {
         return found;
     }
 
+    public boolean searchNorthEast(String word, int x, int y) {
+        boolean found = false;
+        int length = word.length();
+        StringBuilder sb = new StringBuilder();
+        int i = x;
+        int j = y;
+        int l = 0;
+        while(i>=0 && j<size && l<length){
+            sb.append(matrix[i][j]);
+            i = i - 1;
+            j = j + 1;
+            l = l + 1;
+        }
+        String searchString = sb.toString();
+        found = searchString.contains(word);
+        if(found){
+            i = x;
+            j = y;
+            l = 0;
+            System.out.print(word+": ");
+            while(i>=0 && j<size && l<length){
+                System.out.print("("+j+","+i+")");
+                i = i - 1;
+                j = j + 1;
+                l = l + 1;
+                if(l<length){
+                    System.out.print(",");
+                }
+            }
+            System.out.println("");
+        }
+        return found;
+    }
+
 }

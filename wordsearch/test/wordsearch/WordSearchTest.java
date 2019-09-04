@@ -110,4 +110,21 @@ public class WordSearchTest {
         boolean result = wordSearch.searchWest(word, x, y);
         assertEquals(expResult, result);
     }
+    
+    /**
+     * Test of searchNorthEast method, of class Wordsearch.
+     * Matrix Row 9
+     * Matrix Col 5
+     * Expected false
+     */
+    @Test
+    public void testSearchNorthEast() {
+        System.out.println("searchNorthEast");
+        String word = "KHAN";
+        int x = 9;
+        int y = 5;
+        boolean expResult = false;
+        boolean result = wordSearch.searchNorthEast(word, x, y);
+        assertEquals(expResult, result);
+    }
 }
