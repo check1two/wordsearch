@@ -8,6 +8,7 @@ package wordsearch;
 import java.io.File;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
@@ -15,6 +16,15 @@ import org.junit.Test;
  * @author manueltijerino
  */
 public class WordSearchTest {
+    
+    static WordSearch wordSearch;
+    @BeforeClass
+    public static void setUpClass() {
+        File file = new File("/Users/manueltijerino/NetBeansProjects/wordsearch/input.txt");
+        Reader reader = new Reader();
+        Model model = reader.parseFile(file);
+        wordSearch = new WordSearch(model);
+    }
     
     @Test
     public void testParseFile() {

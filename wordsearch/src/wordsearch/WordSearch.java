@@ -11,4 +11,13 @@ package wordsearch;
  */
 public class WordSearch {
     
+    private String[] words;
+    private String[][] matrix;
+    private int size;
+    
+    public WordSearch(Model puzzle){
+        this.words = puzzle.getWords();
+        this.matrix = puzzle.getMatrix();
+        this.size = puzzle.getSize();
+    }
 }
