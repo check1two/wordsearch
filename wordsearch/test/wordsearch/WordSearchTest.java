@@ -21,7 +21,7 @@ public class WordSearchTest {
     static WordSearch wordSearch;
     @BeforeClass
     public static void setUpClass() {
-        File file = new File("/Users/manueltijerino/NetBeansProjects/wordsearch/input.txt");
+        File file = new File("/Users/manueltijerino/NetBeansProjects/wordsearch/wordsearch/input.txt");
         Reader reader = new Reader();
         Model model = reader.parseFile(file);
         wordSearch = new WordSearch(model);
