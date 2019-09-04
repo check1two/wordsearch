@@ -50,4 +50,9 @@ public class WordSearch {
         }
         return found;
     }
+    
+    public boolean searchSouth(String word, int x, int y){
+        boolean found = false;
+        return found;
+    }
 }
