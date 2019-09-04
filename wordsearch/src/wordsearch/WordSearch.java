@@ -112,7 +112,33 @@ public class WordSearch {
     }
 
     public boolean searchWest(String word, int x, int y) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        boolean found = false;
+        int length = word.length();
+        StringBuilder sb = new StringBuilder();
+        int i = y;
+        int l = 0;
+        while(i>=0 && l<length){
+            sb.append(matrix[x][i]);
+            i = i - 1;
+            l = l + 1;
+        }
+        String searchString = sb.toString();
+        found = searchString.contains(word);
+        if(found){
+            i = y;
+            l = 0;
+            System.out.print(word+": ");
+            while(i>=0 && l<length){
+                System.out.print("("+i+","+x+")");
+                i = i - 1;
+                l = l + 1;
+                if(l<length){
+                    System.out.print(",");
+                }
+            }
+            System.out.println("");
+        }
+        return found;
     }
 
 }
